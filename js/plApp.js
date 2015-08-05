@@ -1,0 +1,1 @@
+angular.module('plApp', ['plApp.controllers', 'plApp.services']);

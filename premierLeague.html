@@ -1,0 +1,49 @@
+<head>
+  <TITLE>Premier League</TITLE>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="css/igrica_css.css">
+  <link data-require="bootstrap-css@*" data-semver="3.3.1" rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
+  <script src="js/jquery.min.js"></script>
+  <script src="js/angular.min.js"></script></head>
+
+<body>
+
+  <div ng-app="plApp" ng-controller="plController" id="app" ng-csp>
+
+    <div id="lijevo">
+      Menu
+    </div>
+
+    <div id="desno">
+      <br>
+      <table>
+        <thead>
+          <tr>
+            <th colspan="4">Premier League</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="game in fixtures[page]">
+            <td>
+              {{ game.homeTeamName }}
+            </td>
+            <td>
+              {{ game.awayTeamName }}
+            </td>
+            <td>
+              {{ game.date }}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <a ng-click="prevPage()" class="novaigra">Previous</a>
+      <a ng-click="nextPage()" class="novaigra">Next</a>
+    </div>
+
+  </div>
+  <p style="color: white;">Premier League</p>
+</body>
+
+<script src="js/plApp.js"></script>
+<script src="js/plControllers.js"></script>
+<script src="js/services.js"></script>
